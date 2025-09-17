@@ -1,0 +1,59 @@
+
+/* === Part 1: CSS3 Transitions & Animations === */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #f9a, #9cf);
+}
+
+/* Button hover animation */
+.animated-btn {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background: #6c5ce7;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.animated-btn:hover {
+  background: #00cec9;
+  transform: scale(1.1);
+}
+
+/* Box that JS will animate */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background: #fd79a8;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+.box.animate {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  transform: translateY(-50px);
+  animation: slideIn 0.5s forwards;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-100px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
